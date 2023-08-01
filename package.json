@@ -1,0 +1,46 @@
+{
+  "name": "@artemiokost/x-editor",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev && watch-css",
+    "build": "next build && build-css",
+    "start": "next start && watch-css",
+    "lint": "next lint",
+    "build:lib": "babel src/ -d lib/",
+    "eject": "react-scripts eject",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "draft-js": "^0.11.7",
+    "immutable": "^4.3.1",
+    "next": "^13.4.12",
+    "prettier": "^3.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-twitter-embed": "^4.0.4",
+    "setimmediate": "^1.0.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "7.22.9",
+    "@babel/plugin-proposal-decorators": "^7.22.7",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/runtime": "^7.22.6"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  }
+}

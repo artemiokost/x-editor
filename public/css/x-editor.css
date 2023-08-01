@@ -1,0 +1,387 @@
+.DraftEditor-root, .toolbar {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.DraftEditor-editorContainer {
+  position: relative;
+  z-index: 1; }
+
+.paragraph {
+  margin-bottom: 1rem; }
+
+.public-DraftStyleDefault-ul {
+  list-style-type: disc; }
+
+.public-DraftStyleDefault-ol {
+  list-style-type: decimal; }
+
+.public-DraftStyleDefault-ol,
+.public-DraftStyleDefault-ul {
+  line-height: 2;
+  margin: 24px 0 40px 0;
+  padding-left: 40px; }
+
+.public-DraftStyleDefault-ol li,
+.public-DraftStyleDefault-ul li {
+  padding-left: 10px; }
+
+.public-DraftEditorPlaceholder-root {
+  position: absolute;
+  z-index: 0; }
+
+blockquote {
+  border-left: 2px solid #ddd;
+  color: #7a7a7a;
+  font-style: italic;
+  margin: 12px 0 40px 0;
+  padding: 6px 0 5px 18px; }
+
+.editor__link {
+  color: #00758a;
+  text-decoration: none;
+  cursor: pointer; }
+
+.x-editor {
+  margin-left: 52px;
+  min-height: 180px;
+  position: relative;
+  word-break: break-word; }
+  .x-editor.read-only {
+    margin: 0; }
+  .x-editor .block__hover {
+    padding: 8px;
+    margin: -8px; }
+    .x-editor .block__hover:hover {
+      background-color: #eee;
+      border-radius: 4px; }
+  .x-editor .block__wrapper {
+    user-select: none;
+    background-color: #fff;
+    border-radius: 3px;
+    border: solid 1px #ddd;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
+  .x-editor .block__controls {
+    overflow: auto;
+    padding: 8px; }
+  .x-editor .block__action-group {
+    color: #999;
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .x-editor .block__action {
+    display: inline-block;
+    padding: 0 8px;
+    line-height: 40px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0; }
+    .x-editor .block__action:hover {
+      color: #000; }
+    .x-editor .block__action__icon {
+      vertical-align: middle; }
+  .x-editor .block__content {
+    background-color: #eee;
+    line-height: 100px;
+    text-align: center;
+    position: relative; }
+    .x-editor .block__content--with-padding {
+      padding: 16px; }
+    .x-editor .block__content:before, .x-editor .block__content:after {
+      position: absolute;
+      width: 100%;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      content: "";
+      left: 0; }
+    .x-editor .block__content:before {
+      top: 0; }
+    .x-editor .block__content:after {
+      bottom: 0; }
+  .x-editor .block__notfound__icon {
+    color: #999;
+    vertical-align: middle;
+    width: 64px;
+    height: 64px;
+    margin: 104px; }
+  .x-editor .block__data {
+    padding: 8px 16px 16px;
+    background-color: #fff; }
+  .x-editor .block__input {
+    border: 0;
+    border-bottom: 1px dashed transparent;
+    color: #333;
+    display: block;
+    outline: none;
+    padding: 8px 0;
+    width: 100%;
+    font-size: 0.75rem; }
+    .x-editor .block__input--small-padding {
+      padding: 8px 0 5px 0; }
+    .x-editor .block__input--big-text {
+      font-size: 1rem;
+      font-weight: bold; }
+    .x-editor .block__input__row {
+      line-height: 1rem; }
+    .x-editor .block__input__wrapper {
+      position: relative; }
+    .x-editor .block__input__icon {
+      position: absolute;
+      top: 50%;
+      margin-top: -8px;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      display: none;
+      pointer-events: none; }
+    .x-editor .block__input:hover {
+      border-color: #999; }
+    .x-editor .block__input:hover + svg.block__input__icon {
+      display: inline-block; }
+    .x-editor .block__input:focus {
+      border-color: #00758a;
+      border-style: solid; }
+    .x-editor .block__input:focus + svg.block__input__icon {
+      display: inline-block; }
+    .x-editor .block__input::placeholder {
+      color: #999; }
+    .x-editor .block__input--empty {
+      border-color: #ccc; }
+    .x-editor .block__input--empty + svg.block__input__icon {
+      color: #999;
+      display: inline-block; }
+    .x-editor .block__input--error, .x-editor .block__input--error.block__input--empty, .x-editor .block__input--error:hover {
+      border-color: #ff351e;
+      border-style: solid; }
+    .x-editor .block__input--error + svg.block__input__icon {
+      color: #ff351e;
+      display: inline-block; }
+    .x-editor .block__input__error-text {
+      color: #ff351e;
+      margin-top: 6px;
+      font-size: 0.75rem; }
+  .x-editor .dropdown__wrapper {
+    border-radius: 2px;
+    position: absolute;
+    background: #fff;
+    color: #999;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10; }
+    .x-editor .dropdown__wrapper--open {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+      color: #333; }
+  .x-editor .dropdown {
+    display: none;
+    list-style: none;
+    margin: 0;
+    border-top: 1px solid #ddd;
+    padding: 8px 0; }
+    .x-editor .dropdown--open {
+      display: block; }
+  .x-editor .dropdown__arrow {
+    margin-left: 5px;
+    vertical-align: middle; }
+    .x-editor .dropdown__arrow--open {
+      transform: rotate(180deg); }
+  .x-editor .dropdown__option {
+    color: #999; }
+    .x-editor .dropdown__option:hover {
+      background-color: #0669de;
+      color: #fff; }
+  .x-editor .dropdown__item {
+    padding: 0 8px;
+    line-height: 40px;
+    font-size: 0;
+    user-select: none; }
+    .x-editor .dropdown__item--selected:hover {
+      color: #333; }
+    .x-editor .dropdown__item__text {
+      vertical-align: middle;
+      margin-left: 8px;
+      font-size: 0.75rem; }
+    .x-editor .dropdown__item__icon {
+      vertical-align: middle; }
+  .x-editor .image {
+    display: block;
+    position: relative; }
+    .x-editor .image img {
+      display: block;
+      height: auto;
+      width: 100%; }
+  .x-editor .sidebar {
+    position: relative; }
+    .x-editor .sidebar__menu {
+      float: left;
+      left: -52px;
+      position: absolute;
+      z-index: 2; }
+    .x-editor .sidebar__sidemenu-wrapper {
+      padding: 0;
+      list-style: none;
+      margin: 0; }
+  .x-editor .sidemenu {
+    position: relative;
+    width: 36px;
+    text-align: center; }
+    .x-editor .sidemenu__button {
+      border: 0;
+      color: white;
+      cursor: pointer;
+      height: 32px;
+      font-size: 0;
+      padding: 0;
+      width: 32px;
+      transition: all 0.5s ease;
+      position: relative;
+      background: none;
+      outline: none; }
+      .x-editor .sidemenu__button:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        display: inline-block;
+        background-color: #242424; }
+        .x-editor .sidemenu__button:before:hover {
+          background-color: #363636; }
+      .x-editor .sidemenu__button--open {
+        transform: rotate(45deg); }
+        .x-editor .sidemenu__button--open:before {
+          background-color: #00758a; }
+      .x-editor .sidemenu__button__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -12px 0 0 -12px; }
+    .x-editor .sidemenu__items {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin-top: 8px;
+      padding: 2px 0 0;
+      opacity: 0;
+      overflow: hidden;
+      width: 36px;
+      text-align: center;
+      transition: opacity .3s, visibility .3s;
+      visibility: hidden; }
+      .x-editor .sidemenu__items--open {
+        opacity: 1;
+        visibility: visible; }
+    .x-editor .sidemenu__items .sidemenu__button {
+      background: none; }
+      .x-editor .sidemenu__items .sidemenu__button:before {
+        transition: all 0.1s ease-in-out;
+        background-color: #242424; }
+      .x-editor .sidemenu__items .sidemenu__button:hover:before {
+        transform: scale(1.125); }
+    .x-editor .sidemenu__item {
+      height: 40px; }
+  .x-editor .toolbar {
+    background: yellow;
+    height: 0;
+    position: absolute;
+    display: none;
+    z-index: 10; }
+    .x-editor .toolbar--open {
+      display: block; }
+    .x-editor .toolbar__error-msg {
+      margin: 0;
+      height: 0;
+      transition: height 0.2s ease-in-out; }
+    .x-editor .toolbar--error .toolbar__wrapper {
+      background-color: #e0351f; }
+    .x-editor .toolbar--error .toolbar__arrow {
+      border-color: #e0351f transparent transparent; }
+    .x-editor .toolbar--error .toolbar__error-msg {
+      color: white;
+      margin: -8px 0 0 20px;
+      padding-bottom: 12px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      height: 28px; }
+    .x-editor .toolbar--error .toolbar__button {
+      color: white; }
+    .x-editor .toolbar--error::-moz-placeholder {
+      color: white; }
+    .x-editor .toolbar--error::-webkit-input-placeholder {
+      color: white; }
+    .x-editor .toolbar--error:-moz-placeholder {
+      color: white; }
+    .x-editor .toolbar--error:-ms-input-placeholder {
+      color: white; }
+    .x-editor .toolbar__wrapper {
+      background-color: #242424;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px 0 rgba(10, 10, 10, 0.1);
+      left: -50%;
+      position: relative;
+      transition: background-color 0.2s ease-in-out; }
+    .x-editor .toolbar__list {
+      padding: 0 8px;
+      margin: 0;
+      white-space: nowrap; }
+    .x-editor .toolbar__arrow {
+      display: inline-block;
+      top: 100%;
+      left: 50%;
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-width: 8px;
+      border-style: solid;
+      border-color: #242424 transparent transparent;
+      margin-left: -8px;
+      transition: border-color 0.2s ease-in-out; }
+    .x-editor .toolbar__item {
+      display: inline-block;
+      color: #dbdbdb; }
+      .x-editor .toolbar__item:hover {
+        color: white; }
+      .x-editor .toolbar__item--active {
+        color: #00758a; }
+        .x-editor .toolbar__item--active:hover {
+          color: #00758a; }
+      .x-editor .toolbar__item--separator {
+        border-right: 1px solid #363636;
+        height: 20px;
+        margin: 0 8px; }
+    .x-editor .toolbar__button {
+      padding: 0;
+      color: inherit;
+      cursor: pointer;
+      border: 0;
+      height: 56px;
+      width: 40px;
+      background: transparent; }
+    .x-editor .toolbar__input {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 0.875rem;
+      height: auto;
+      line-height: 1.2rem;
+      margin: 0;
+      padding: 20px;
+      width: 250px; }
+      .x-editor .toolbar__input:focus {
+        outline: none; }
+    .x-editor .toolbar__input-button {
+      padding-right: 16px; }
+  .x-editor .twitter-embed {
+    display: flex;
+    justify-content: center; }
+  .x-editor .video {
+    padding-bottom: 56.25%;
+    position: relative; }
+    .x-editor .video iframe {
+      position: absolute;
+      height: 100%;
+      width: 100%; }
